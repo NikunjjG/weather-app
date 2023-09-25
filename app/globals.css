@@ -29,6 +29,7 @@
   margin-top: 25px;
 }
 
-/* .top, .middle, .bottom{
-  margin-top: 30px;
-} */
+.search{
+  width: 35px;
+  height: 35px;
+}
