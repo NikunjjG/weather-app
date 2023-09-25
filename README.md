@@ -1,13 +1,13 @@
-Weather App Documentation
-Introduction
+#Weather App Documentation
+##Introduction
 The Weather App is a web application developed using Next.js that provides users with current weather information for a specific location. It fetches weather data from the OpenWeather API and displays it in a user-friendly interface.
 
-Features
+##Features
 Current weather information, including temperature, feels-like temperature, weather condition, humidity, wind speed, and pressure.
 Option to search for weather information in different locations.
 User-friendly interface with temperature units in Celsius and Fahrenheit.
 
-Installation
+##Installation
 To run the Weather App locally, follow these steps:
 
 1. Clone the repository to your local machine.
@@ -17,7 +17,7 @@ To run the Weather App locally, follow these steps:
 5. Start the development server.
 6. Open your web browser and access the app at http://localhost:3000.
 
-Usage
+##Usage
 Home Page
 The app displays weather information for the default location, "New Delhi," when initially loaded.
 
@@ -38,17 +38,17 @@ Wind speed
 Pressure
 The temperature units can be toggled between Celsius and Fahrenheit by clicking on the temperature value.
 
-Suggestion
+##Suggestion
 Below the weather information, the app provides a suggestion based on the current temperature.
 Attribution
 Weather icons used in this app are provided by Smashicons from www.flaticon.com.
 Contributing
 We welcome contributions to improve the Weather App. If you would like to contribute, please follow our Contribution Guidelines.
 
-License
+##License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contact
+##Contact
 For any questions or feedback, please contact Nikunj.
 
 
