@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Weather App Documentation
+Introduction
+The Weather App is a web application developed using Next.js that provides users with current weather information for a specific location. It fetches weather data from the OpenWeather API and displays it in a user-friendly interface.
 
-## Getting Started
+Features
+Current weather information, including temperature, feels-like temperature, weather condition, humidity, wind speed, and pressure.
+Option to search for weather information in different locations.
+User-friendly interface with temperature units in Celsius and Fahrenheit.
 
-First, run the development server:
+Installation
+To run the Weather App locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install the required dependencies.
+4. Create an .env.local file in the root directory and add your OpenWeather API key:
+5. Start the development server.
+6. Open your web browser and access the app at http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Usage
+Home Page
+The app displays weather information for the default location, "New Delhi," when initially loaded.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To search for weather information in a different location:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Double-click the location name at the top of the page to activate the search input field.
+Enter the name of the location you want to search for.
+Click the search icon (magnifying glass) to fetch weather data for the entered location.
+Weather Information
+The app displays the following weather information:
 
-## Learn More
+Location name
+Temperature (in Celsius and Fahrenheit)
+Feels-like temperature
+Weather condition
+Humidity
+Wind speed
+Pressure
+The temperature units can be toggled between Celsius and Fahrenheit by clicking on the temperature value.
 
-To learn more about Next.js, take a look at the following resources:
+Suggestion
+Below the weather information, the app provides a suggestion based on the current temperature.
+Attribution
+Weather icons used in this app are provided by Smashicons from www.flaticon.com.
+Contributing
+We welcome contributions to improve the Weather App. If you would like to contribute, please follow our Contribution Guidelines.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Contact
+For any questions or feedback, please contact Nikunj.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
