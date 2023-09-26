@@ -3,7 +3,6 @@ import React from 'react';
 function WeatherDisplay({ weather }) {
   let weatherIcon;
 
-  // Determine the weather icon based on temperature and humidity
   if (weather == 'Haze') {
     weatherIcon = './weather-icon-pack/sunny.png';
   } else if (weather == 'Clear') {
@@ -16,11 +15,14 @@ function WeatherDisplay({ weather }) {
     weatherIcon = './weather-icon-pack/windy.png';
   } else if(weather == 'Clouds'){
     weatherIcon = './weather-icon-pack/cloud.png';
+  }else if(weather == 'Mist'){
+    weatherIcon = './weather-icon-pack/mist.png'
+  }else if(weather == 'Smoke'){
+    weatherIcon = './weather-icon-pack/smoke.png'
   }else {
     weatherIcon = '/unknown.png';
   }
 
-  // Render the weather icon
   return (
     <div className="weather-icon">
       <img src={weatherIcon} alt="Weather Icon" />

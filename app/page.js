@@ -2,46 +2,24 @@
 import React, { useEffect, useState } from "react";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import axios from "axios";
 import Suggestion from "@/components/suggestion";
 import LowerSection from "@/components/LowerSection";
 import MiddleSection from "@/components/MiddleSection";
+import { fetchWeatherData } from "@/controllers/apis/apis"
+import { fetchLocationData } from "@/controllers/apis/apis";
 
 const page = () => {
   const [visibleSearch, setVisibleSearch] = useState(false);
   const [weatherData, setWeatherData] = useState(null);
-  const [error, setError] = useState(null);
   const [location, setLocation] = useState("");
-  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+  
 
   useEffect(() => {
-    const fetchWeatherData = async () => {
-      try {
-        const city = "New Delhi";
-        const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
-        );
-        setWeatherData(response.data);
-      } catch (err) {
-        setError(err.message);
-      }
-    };
-    fetchWeatherData();
+    fetchWeatherData(setWeatherData);
   }, []);
 
   const handleSearch = () => {
     setVisibleSearch(!visibleSearch);
-  };
-
-  const fetchLocationData = async () => {
-    try {
-      const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`
-      );
-      setWeatherData(response.data);
-    } catch (err) {
-      setError(err.message);
-    }
   };
 
   return (
@@ -72,7 +50,7 @@ const page = () => {
                 />
                 <SearchOutlinedIcon
                   className="mx-2 border-2 border-black p-1.5 rounded-3xl search hover:bg-black hover:text-white"
-                  onClick={fetchLocationData}
+                  onClick={() => fetchLocationData(setWeatherData, location)}
                 />
               </div>
             )}
