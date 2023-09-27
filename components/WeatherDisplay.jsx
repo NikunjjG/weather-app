@@ -17,7 +17,7 @@ function WeatherDisplay({ weather }) {
     weatherIcon = './weather-icon-pack/cloud.png';
   }else if(weather == 'Mist'){
     weatherIcon = './weather-icon-pack/mist.png'
-  }else if(weather == 'Smoke'){
+  }else if(weather == 'Smoke' || weather == 'Fog'){
     weatherIcon = './weather-icon-pack/smoke.png'
   }else {
     weatherIcon = '/unknown.png';

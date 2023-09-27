@@ -12,11 +12,28 @@ const page = () => {
   const [visibleSearch, setVisibleSearch] = useState(false);
   const [weatherData, setWeatherData] = useState(null);
   const [location, setLocation] = useState("");
-  
+
+  const [coords, setCoords] = useState({})
+
+  useEffect(()=>{
+    const getCurrentPosition = ()=>{
+      navigator.geolocation.getCurrentPosition((position)=>{
+
+        let newCords = {
+          latitude : position.coords.latitude,
+          longitude : position.coords.longitude
+        }
+
+        setCoords(newCords)
+      })
+    }
+
+    getCurrentPosition()
+  },[])
 
   useEffect(() => {
-    fetchWeatherData(setWeatherData);
-  }, []);
+    fetchWeatherData(setWeatherData, coords);
+  }, [coords]);
 
   const handleSearch = () => {
     setVisibleSearch(!visibleSearch);

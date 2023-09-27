@@ -1,12 +1,13 @@
 import axios from "axios";
 import Cookies from "js-cookie";
+import { useEffect } from "react";
 const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
-export async function fetchWeatherData(setWeatherData){
+
+export async function fetchWeatherData(setWeatherData, cords){
     try {
-      const city = "New Delhi";
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${cords.latitude}&lon=${cords.longitude}&appid=${apiKey}`
       );
       setWeatherData(response.data);
     } catch (err) {
